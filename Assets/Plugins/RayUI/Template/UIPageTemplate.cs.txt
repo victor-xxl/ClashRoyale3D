@@ -1,0 +1,21 @@
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public partial class {ROOT_UI_NAME} : UIPage
+{
+{UI_WIDGET_FIELD_LIST}
+	
+	public {ROOT_UI_NAME}() : base(UIType.{UI_TYPE}, UIMode.{UI_MODE}, UICollider.{UI_COLLIDER})
+	{
+	}
+
+	protected override string uiPath => "{UI_PATH}";
+
+	protected override void OnAwake()
+	{
+{FIELD_INITIALIZATION_LIST}
+		OnStart();
+	}
+}

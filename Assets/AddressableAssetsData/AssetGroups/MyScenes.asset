@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MyScenes
+  m_EditorClassIdentifier: 
+  m_GroupName: MyScenes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e1d730c6fcca57e4ca303953bb0e467b
+  m_SerializeEntries:
+  - m_GUID: 2d2b65f540511cf4ebf5dab3fb0176d5
+    m_Address: Main
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: 2d2b65f540511cf4ebf5dab3fb0176d5, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 2d2b65f540511cf4ebf5dab3fb0176d5, type: 3}
+  - m_GUID: 54fac24673796514c8f55a73059be8ab
+    m_Address: Battle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: 54fac24673796514c8f55a73059be8ab, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 54fac24673796514c8f55a73059be8ab, type: 3}
+  - m_GUID: 5e6f056a915cee24a8a283baf4777f16
+    m_Address: UIReference
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: 5e6f056a915cee24a8a283baf4777f16, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 5e6f056a915cee24a8a283baf4777f16, type: 3}
+  - m_GUID: b9c53d41d80680543aab892a3de2d432
+    m_Address: Start
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: b9c53d41d80680543aab892a3de2d432, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: b9c53d41d80680543aab892a3de2d432, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 62fd5e501abef4d188f123698eca5c92, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c11bf1927de1ec3429eeaa52f1a27d38, type: 2}
+    - {fileID: 11400000, guid: 6892ed3f9ee49514a8236f79e75d37a9, type: 2}

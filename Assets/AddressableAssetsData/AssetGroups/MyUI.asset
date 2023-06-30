@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MyUI
+  m_EditorClassIdentifier: 
+  m_GroupName: MyUI
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 44010f220f1e5cb4fb37cebc6a261b77
+  m_SerializeEntries:
+  - m_GUID: 32f0242d173651c4ab0a60fee7b1fb9c
+    m_Address: LogoPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3367895985714063811, guid: 32f0242d173651c4ab0a60fee7b1fb9c,
+      type: 3}
+    m_TargetAsset: {fileID: 3367895985714063811, guid: 32f0242d173651c4ab0a60fee7b1fb9c,
+      type: 3}
+  - m_GUID: 527176e0f504b5d4a9e405fbdde774e9
+    m_Address: DeckPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4728836414655444965, guid: 527176e0f504b5d4a9e405fbdde774e9,
+      type: 3}
+    m_TargetAsset: {fileID: 4728836414655444965, guid: 527176e0f504b5d4a9e405fbdde774e9,
+      type: 3}
+  - m_GUID: b5c9672ddf50d754bad021ceb82f991d
+    m_Address: TopFixPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1411381889311019281, guid: b5c9672ddf50d754bad021ceb82f991d,
+      type: 3}
+    m_TargetAsset: {fileID: 1411381889311019281, guid: b5c9672ddf50d754bad021ceb82f991d,
+      type: 3}
+  - m_GUID: e39272f58c7b1be42b693246e09c0704
+    m_Address: GameOverPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1411381889311019281, guid: e39272f58c7b1be42b693246e09c0704,
+      type: 3}
+    m_TargetAsset: {fileID: 1411381889311019281, guid: e39272f58c7b1be42b693246e09c0704,
+      type: 3}
+  - m_GUID: e3b5a273a317c984082945df8c1b3416
+    m_Address: LoginPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1411381889311019281, guid: e3b5a273a317c984082945df8c1b3416,
+      type: 3}
+    m_TargetAsset: {fileID: 1411381889311019281, guid: e3b5a273a317c984082945df8c1b3416,
+      type: 3}
+  - m_GUID: f213e29bdec8b634ca9e6a62d5322286
+    m_Address: MainPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1411381889311019281, guid: f213e29bdec8b634ca9e6a62d5322286,
+      type: 3}
+    m_TargetAsset: {fileID: 1411381889311019281, guid: f213e29bdec8b634ca9e6a62d5322286,
+      type: 3}
+  - m_GUID: fe6282ae547ccb748ade891c8574938c
+    m_Address: BottomFixPage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1411381889311019281, guid: fe6282ae547ccb748ade891c8574938c,
+      type: 3}
+    m_TargetAsset: {fileID: 1411381889311019281, guid: fe6282ae547ccb748ade891c8574938c,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 62fd5e501abef4d188f123698eca5c92, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b8e113b9ef3838849ad19b32192d5800, type: 2}
+    - {fileID: 11400000, guid: ef7f12ac8e12dbb448991f0772d4c12d, type: 2}

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MyPlaceables
+  m_EditorClassIdentifier: 
+  m_GroupName: MyPlaceables
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7612baa26b1f1724e9619014ea2ed621
+  m_SerializeEntries:
+  - m_GUID: 374cd80504a517c49bf3a936ec40798e
+    m_Address: "\u6218\u58EB-\u84DD"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2803772846224482086, guid: 374cd80504a517c49bf3a936ec40798e,
+      type: 3}
+    m_TargetAsset: {fileID: 2803772846224482086, guid: 374cd80504a517c49bf3a936ec40798e,
+      type: 3}
+  - m_GUID: 7fef62dbc9cb97d48b7fb51cc35a496a
+    m_Address: "\u6218\u58EB-\u7EA2"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 5701704621631426976, guid: 7fef62dbc9cb97d48b7fb51cc35a496a,
+      type: 3}
+    m_TargetAsset: {fileID: 5701704621631426976, guid: 7fef62dbc9cb97d48b7fb51cc35a496a,
+      type: 3}
+  - m_GUID: 8be42c0f4e8b8fc4b8deb527e859802e
+    m_Address: "\u5F13\u7BAD\u624B-\u84DD"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1771014839234243263, guid: 8be42c0f4e8b8fc4b8deb527e859802e,
+      type: 3}
+    m_TargetAsset: {fileID: 1771014839234243263, guid: 8be42c0f4e8b8fc4b8deb527e859802e,
+      type: 3}
+  - m_GUID: 92436963dbeb8734e96286747207aeed
+    m_Address: "\u6CD5\u5E08-\u7EA2"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1122871589, guid: 92436963dbeb8734e96286747207aeed, type: 3}
+    m_TargetAsset: {fileID: 1122871589, guid: 92436963dbeb8734e96286747207aeed, type: 3}
+  - m_GUID: b0294e60096d3304a928c36902dab3e0
+    m_Address: "\u5F13\u7BAD\u624B-\u7EA2"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 5537164977549460556, guid: b0294e60096d3304a928c36902dab3e0,
+      type: 3}
+    m_TargetAsset: {fileID: 5537164977549460556, guid: b0294e60096d3304a928c36902dab3e0,
+      type: 3}
+  - m_GUID: bc2edcfa3bb43ac418634a7151e6c38a
+    m_Address: "\u6CD5\u5E08-\u84DD"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 8584991783828831444, guid: bc2edcfa3bb43ac418634a7151e6c38a,
+      type: 3}
+    m_TargetAsset: {fileID: 8584991783828831444, guid: bc2edcfa3bb43ac418634a7151e6c38a,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 62fd5e501abef4d188f123698eca5c92, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f06dc04da2c4ae942ac67be2fc41e696, type: 2}
+    - {fileID: 11400000, guid: aa9214be961dd6c4d9cc893f7b91f155, type: 2}
