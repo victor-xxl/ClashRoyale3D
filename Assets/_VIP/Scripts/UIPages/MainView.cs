@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using KBEngine;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -6,16 +8,20 @@ public partial class MainPage
 {
 	public void OnStart()
 	{
-		//KBEngine.Event.registerOut("MyEventName", this, "MyEventHandler");
+        KBEngine.Event.registerOut(KBEngine.EventOutTypes.onEnterSpace, this, nameof(OnEnterSpace));
 
 		this.battleButton.onClick.AddListener(() =>
 		{
-
-			Addressables.LoadSceneAsync("Battle").Completed += MainPage_Completed;
+			KBEngine.Event.fireIn("EnterRoom");
 		});
 	}
 
-	private void MainPage_Completed(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance> obj)
+    public void OnEnterSpace(Entity e)
+    {
+        Addressables.LoadSceneAsync("Battle").Completed += MainPage_Completed;
+    }
+
+    private void MainPage_Completed(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance> obj)
 	{
 		UIPage.CloseAllPages();
 	}
