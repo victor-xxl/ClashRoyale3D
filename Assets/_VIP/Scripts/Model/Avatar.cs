@@ -31,7 +31,13 @@ public class Avatar : AvatarBase
         if (isPlayer())
         {
             KBEngine.Event.registerIn("EnterRoom", this, nameof(EnterRoom));
+            KBEngine.Event.registerIn("PlaceCard", this, nameof(PlaceCard));
         }
+    }
+
+    public void PlaceCard(CMD cmd)
+    {
+        cellEntityCall.PlaceCard(cmd);
     }
 
     public void EnterRoom()

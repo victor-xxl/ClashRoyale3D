@@ -34,6 +34,9 @@ namespace KBEngine
 		public SByte state = 0;
 		public virtual void onStateChanged(SByte oldValue) {}
 
+		public abstract void OnFrameSync(Int32 arg1, FRAME_SYNC arg2); 
+		public abstract void OnGameOver(); 
+		public abstract void OnGameReady(); 
 
 		public AvatarBase()
 		{
@@ -125,6 +128,17 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
+				case 5:
+					Int32 OnFrameSync_arg1 = stream.readInt32();
+					FRAME_SYNC OnFrameSync_arg2 = ((DATATYPE_FRAME_SYNC)method.args[1]).createFromStreamEx(stream);
+					OnFrameSync(OnFrameSync_arg1, OnFrameSync_arg2);
+					break;
+				case 6:
+					OnGameOver();
+					break;
+				case 4:
+					OnGameReady();
+					break;
 				default:
 					break;
 			};

@@ -41,17 +41,16 @@ public class CPU : MonoBehaviour
 			if (isGameOver)
 				break;
 
-            var viewList = await MyCardView.CreatePlacable(
+             await MyCardView.CreatePlacable(
 	            cardData,
 	            new Vector3(Random.Range(range[0].position.x,range[1].position.x), 0, Random.Range(range[0].position.z,range[1].position.z)),
 	            MyPlaceableMgr.instance.transform,
-	            Placeable.Faction.Opponent
-	            );
+	            Placeable.Faction.Opponent, MyPlaceableMgr.instance.his);
 
-			foreach (var view in viewList)
-			{
-				MyPlaceableMgr.instance.his.Add(view);
-			}
+			//foreach (var view in viewList)
+			//{
+			//	MyPlaceableMgr.instance.his.Add(view);
+			//}
 
 			if (isGameOver)
 				break;

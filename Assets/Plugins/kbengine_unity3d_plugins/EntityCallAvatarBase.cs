@@ -21,6 +21,15 @@ namespace KBEngine
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_BASE;
 		}
 
+		public void EnterRoom()
+		{
+			Bundle pBundle = newCall("EnterRoom", 0);
+			if(pBundle == null)
+				return;
+
+			sendCall(null);
+		}
+
 	}
 
 	public class EntityCellEntityCall_AvatarBase : EntityCall
@@ -29,6 +38,16 @@ namespace KBEngine
 		public EntityCellEntityCall_AvatarBase(Int32 eid, string ename) : base(eid, ename)
 		{
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
+		}
+
+		public void PlaceCard(CMD arg1)
+		{
+			Bundle pBundle = newCall("PlaceCard", 0);
+			if(pBundle == null)
+				return;
+
+			((DATATYPE_CMD)EntityDef.id2datatypes[23]).addToStreamEx(bundle, arg1);
+			sendCall(null);
 		}
 
 	}
