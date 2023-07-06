@@ -15,6 +15,14 @@ public class Avatar : AvatarBase
     public GameState gameState;
     public int frameId;
     public List<FRAME_SYNC> frames = new List<FRAME_SYNC>();
+
+    public Avatar Player
+    {
+        get
+        {
+            return (KBEngine.KBEngineApp.app.player() as Avatar);
+        }
+    }
     public override void __init__()
     {
         base.__init__();
@@ -34,18 +42,21 @@ public class Avatar : AvatarBase
     #region CallBack
     public override void OnFrameSync(int arg1, FRAME_SYNC arg2)
     {
-        throw new NotImplementedException();
+        Dbg.INFO_MSG($"OnFrameSync{arg1},{arg2}");
     }
 
     public override void OnGameOver()
     {
-        throw new NotImplementedException();
+        Dbg.INFO_MSG("房间帧已跑完");
     }
 
     public override void OnGameReady()
     {
+        Dbg.INFO_MSG("房间帧已匹配完毕");
         gameState = GameState.GAME_START;
         frameId = 0;
+
+        KBEngine.Event.fireOut("OnGameReady");
     }
     #endregion
 
