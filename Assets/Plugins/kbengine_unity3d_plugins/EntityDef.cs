@@ -226,7 +226,81 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(state / 8).");
 
+			List<DATATYPE_BASE> pAvatar_OnFrameSync_args = new List<DATATYPE_BASE>();
+			pAvatar_OnFrameSync_args.Add(EntityDef.id2datatypes[8]);
+			pAvatar_OnFrameSync_args.Add(EntityDef.id2datatypes[24]);
+
+			Method pAvatar_OnFrameSync = new Method();
+			pAvatar_OnFrameSync.name = "OnFrameSync";
+			pAvatar_OnFrameSync.methodUtype = 5;
+			pAvatar_OnFrameSync.aliasID = 1;
+			pAvatar_OnFrameSync.args = pAvatar_OnFrameSync_args;
+
+			pAvatarModule.methods["OnFrameSync"] = pAvatar_OnFrameSync; 
 			pAvatarModule.useMethodDescrAlias = true;
+			pAvatarModule.idmethods[(UInt16)pAvatar_OnFrameSync.aliasID] = pAvatar_OnFrameSync;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnFrameSync / 5).");
+
+			List<DATATYPE_BASE> pAvatar_OnGameOver_args = new List<DATATYPE_BASE>();
+
+			Method pAvatar_OnGameOver = new Method();
+			pAvatar_OnGameOver.name = "OnGameOver";
+			pAvatar_OnGameOver.methodUtype = 6;
+			pAvatar_OnGameOver.aliasID = 2;
+			pAvatar_OnGameOver.args = pAvatar_OnGameOver_args;
+
+			pAvatarModule.methods["OnGameOver"] = pAvatar_OnGameOver; 
+			pAvatarModule.useMethodDescrAlias = true;
+			pAvatarModule.idmethods[(UInt16)pAvatar_OnGameOver.aliasID] = pAvatar_OnGameOver;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameOver / 6).");
+
+			List<DATATYPE_BASE> pAvatar_OnGameReady_args = new List<DATATYPE_BASE>();
+
+			Method pAvatar_OnGameReady = new Method();
+			pAvatar_OnGameReady.name = "OnGameReady";
+			pAvatar_OnGameReady.methodUtype = 4;
+			pAvatar_OnGameReady.aliasID = 3;
+			pAvatar_OnGameReady.args = pAvatar_OnGameReady_args;
+
+			pAvatarModule.methods["OnGameReady"] = pAvatar_OnGameReady; 
+			pAvatarModule.useMethodDescrAlias = true;
+			pAvatarModule.idmethods[(UInt16)pAvatar_OnGameReady.aliasID] = pAvatar_OnGameReady;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameReady / 4).");
+
+			List<DATATYPE_BASE> pAvatar_EnterRoom_args = new List<DATATYPE_BASE>();
+
+			Method pAvatar_EnterRoom = new Method();
+			pAvatar_EnterRoom.name = "EnterRoom";
+			pAvatar_EnterRoom.methodUtype = 3;
+			pAvatar_EnterRoom.aliasID = -1;
+			pAvatar_EnterRoom.args = pAvatar_EnterRoom_args;
+
+			pAvatarModule.methods["EnterRoom"] = pAvatar_EnterRoom; 
+			pAvatarModule.base_methods["EnterRoom"] = pAvatar_EnterRoom;
+
+			pAvatarModule.idbase_methods[pAvatar_EnterRoom.methodUtype] = pAvatar_EnterRoom;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(EnterRoom / 3).");
+
+			List<DATATYPE_BASE> pAvatar_PlaceCard_args = new List<DATATYPE_BASE>();
+			pAvatar_PlaceCard_args.Add(EntityDef.id2datatypes[23]);
+
+			Method pAvatar_PlaceCard = new Method();
+			pAvatar_PlaceCard.name = "PlaceCard";
+			pAvatar_PlaceCard.methodUtype = 1;
+			pAvatar_PlaceCard.aliasID = -1;
+			pAvatar_PlaceCard.args = pAvatar_PlaceCard_args;
+
+			pAvatarModule.methods["PlaceCard"] = pAvatar_PlaceCard; 
+			pAvatarModule.cell_methods["PlaceCard"] = pAvatar_PlaceCard;
+
+			pAvatarModule.idcell_methods[pAvatar_PlaceCard.methodUtype] = pAvatar_PlaceCard;
+
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(PlaceCard / 1).");
+
 		}
 
 		public static void initDefTypes()

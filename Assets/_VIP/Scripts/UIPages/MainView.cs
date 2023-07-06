@@ -10,8 +10,8 @@ public partial class MainPage
 
 		this.battleButton.onClick.AddListener(() =>
 		{
-
-			Addressables.LoadSceneAsync("Battle").Completed += MainPage_Completed;
+			KBEngine.Event.fireIn("EnterRoom");
+			//Addressables.LoadSceneAsync("Battle").Completed += MainPage_Completed;
 		});
 	}
 
