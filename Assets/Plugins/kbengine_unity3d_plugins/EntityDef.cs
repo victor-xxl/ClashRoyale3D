@@ -232,7 +232,7 @@ namespace KBEngine
 
 			Method pAvatar_OnFrameSync = new Method();
 			pAvatar_OnFrameSync.name = "OnFrameSync";
-			pAvatar_OnFrameSync.methodUtype = 5;
+			pAvatar_OnFrameSync.methodUtype = 6;
 			pAvatar_OnFrameSync.aliasID = 1;
 			pAvatar_OnFrameSync.args = pAvatar_OnFrameSync_args;
 
@@ -240,13 +240,13 @@ namespace KBEngine
 			pAvatarModule.useMethodDescrAlias = true;
 			pAvatarModule.idmethods[(UInt16)pAvatar_OnFrameSync.aliasID] = pAvatar_OnFrameSync;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnFrameSync / 5).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnFrameSync / 6).");
 
 			List<DATATYPE_BASE> pAvatar_OnGameOver_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_OnGameOver = new Method();
 			pAvatar_OnGameOver.name = "OnGameOver";
-			pAvatar_OnGameOver.methodUtype = 6;
+			pAvatar_OnGameOver.methodUtype = 7;
 			pAvatar_OnGameOver.aliasID = 2;
 			pAvatar_OnGameOver.args = pAvatar_OnGameOver_args;
 
@@ -254,13 +254,13 @@ namespace KBEngine
 			pAvatarModule.useMethodDescrAlias = true;
 			pAvatarModule.idmethods[(UInt16)pAvatar_OnGameOver.aliasID] = pAvatar_OnGameOver;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameOver / 6).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameOver / 7).");
 
 			List<DATATYPE_BASE> pAvatar_OnGameReady_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_OnGameReady = new Method();
 			pAvatar_OnGameReady.name = "OnGameReady";
-			pAvatar_OnGameReady.methodUtype = 4;
+			pAvatar_OnGameReady.methodUtype = 5;
 			pAvatar_OnGameReady.aliasID = 3;
 			pAvatar_OnGameReady.args = pAvatar_OnGameReady_args;
 
@@ -268,13 +268,13 @@ namespace KBEngine
 			pAvatarModule.useMethodDescrAlias = true;
 			pAvatarModule.idmethods[(UInt16)pAvatar_OnGameReady.aliasID] = pAvatar_OnGameReady;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameReady / 4).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(OnGameReady / 5).");
 
 			List<DATATYPE_BASE> pAvatar_EnterRoom_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_EnterRoom = new Method();
 			pAvatar_EnterRoom.name = "EnterRoom";
-			pAvatar_EnterRoom.methodUtype = 3;
+			pAvatar_EnterRoom.methodUtype = 4;
 			pAvatar_EnterRoom.aliasID = -1;
 			pAvatar_EnterRoom.args = pAvatar_EnterRoom_args;
 
@@ -283,7 +283,7 @@ namespace KBEngine
 
 			pAvatarModule.idbase_methods[pAvatar_EnterRoom.methodUtype] = pAvatar_EnterRoom;
 
-			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(EnterRoom / 3).");
+			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(EnterRoom / 4).");
 
 			List<DATATYPE_BASE> pAvatar_PlaceCard_args = new List<DATATYPE_BASE>();
 			pAvatar_PlaceCard_args.Add(EntityDef.id2datatypes[23]);

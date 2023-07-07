@@ -128,15 +128,15 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 5:
+				case 6:
 					Int32 OnFrameSync_arg1 = stream.readInt32();
 					FRAME_SYNC OnFrameSync_arg2 = ((DATATYPE_FRAME_SYNC)method.args[1]).createFromStreamEx(stream);
 					OnFrameSync(OnFrameSync_arg1, OnFrameSync_arg2);
 					break;
-				case 6:
+				case 7:
 					OnGameOver();
 					break;
-				case 4:
+				case 5:
 					OnGameReady();
 					break;
 				default:

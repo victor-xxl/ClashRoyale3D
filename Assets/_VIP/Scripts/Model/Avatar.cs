@@ -16,7 +16,7 @@ public class Avatar : AvatarBase
     public int frameId;
     public List<FRAME_SYNC> frames = new List<FRAME_SYNC>();
 
-    public Avatar Player
+    public static Avatar Player
     {
         get
         {
@@ -46,9 +46,12 @@ public class Avatar : AvatarBase
     }
 
     #region CallBack
-    public override void OnFrameSync(int arg1, FRAME_SYNC arg2)
+    public override void OnFrameSync(int frameId, FRAME_SYNC fs)
     {
-        Dbg.INFO_MSG($"OnFrameSync{arg1},{arg2}");
+        Dbg.INFO_MSG($"OnFrameSync{frameId},{fs}");
+        //生产帧
+        this.frameId = frameId;
+        this.frames.Add(fs);
     }
 
     public override void OnGameOver()

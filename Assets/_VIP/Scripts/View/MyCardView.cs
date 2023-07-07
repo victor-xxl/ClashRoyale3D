@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Profiling;
 using UnityRoyale;
 
@@ -20,12 +21,72 @@ public class MyCardView : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoint
 
     private Camera mainCam;
 
-    private List<MyPlaceableView> previewList= new List<MyPlaceableView>();
+    private List<MyPlaceableView> previewList = new List<MyPlaceableView>();
     private void Start()
     {
         mainCam = Camera.main;
 
         previewHolder = GameObject.Find("PreviewHolder").transform;
+    }
+    void FixedUpdate()
+    {
+        if (Avatar.Player.gameState == GameState.GAME_START)
+        {
+            ConsumeFrame();
+            Avatar.Player.frameId++;
+        }
+    }
+    /// <summary>
+    /// 消费帧要做的两件事：1、按帧队列顺序放兵；2、放兵后，兵种和子弹的模拟计算
+    /// 注意：FixedUpdate有稳定的帧时间间隔，所以刚好用来可以按照固定的时间间隔去消费帧，例如：如果服务器是每秒1帧，那么客户端也可以按此速率消费
+    /// 只有在一帧的时间消耗完以后该帧才会被消费完(1ist.remove(0))
+    /// 如果list中有很多frame，说明客户端卡了，积攒了太多帧，需要追帧
+    /// 为了记录一帧时间的消耗剩余情况，需要增加一个msRemain字段（初始为0）
+    /// 每帧的消耗：移动和旋转的计算（定点数），例如法师每帧的运动模拟，也就是计算在一个fixedDeltaTime时间内，角色应从当前位置移动或旋转到什么位置
+    /// 然后在显示层动画插值过去（建立一个DoTween序列，一个一个动画去走）
+    /// 如果需要追帧，就每帧计算n个fixedDeltaTime（for循环）
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    private async void ConsumeFrame()
+    {
+        var fs = Avatar.Player.frames;
+
+        if (fs.Count == 0)
+            return;
+
+        //追帧
+        //有的客户端因为网络原因会比服务器当前帧慢，此时应追帧
+        //如何追？很简单，就是像放录像一样，我们快进，就追上服务器了
+        //追帧期间应禁止操作，并且3帧以内不追，因为客户端永远赶不上服务器（可能至少差一帧），如果一直追帧会造成客户端卡操作
+        //Mathf.Max(fs.Count - 3，1) => 防止出现0或负数
+        //Mathf.Min(Mathf.Max(fs.Count - 3，1)， 5) => 每次最多追5帧
+        for (int i = 0; i < Mathf.Min(Mathf.Max(fs.Count - 3, 1), 5); i++)
+        {
+            await OnFrame(fs);
+        }
+    }
+
+    private async Task OnFrame(List<FRAME_SYNC> fs)
+    {
+        var frame = fs[0];
+        fs.RemoveAt(0);
+        foreach (var cmd in frame.cmds)
+        {
+            if (cmd.cardId == -1)
+                continue;
+            var avatar = KBEngineApp.app.findEntity(cmd.pid) as Avatar;
+
+            MyCard cardData = MyCardModel.instance.FindById(cmd.cardId);
+
+
+            await CreatePlacable(
+                cardData,
+                new Vector3(cmd.pos.x / 1000.0f, 0, cmd.pos.z / 1000.0f),
+                MyPlaceableMgr.instance.transform,
+                cmd.pid == KBEngineApp.app.player().id ? Placeable.Faction.Player : Placeable.Faction.Opponent,
+                cmd.pid == KBEngineApp.app.player().id ? MyPlaceableMgr.instance.mine : MyPlaceableMgr.instance.his
+                );
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

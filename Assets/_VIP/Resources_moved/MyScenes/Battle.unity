@@ -5910,7 +5910,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247238200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24b3fbcdf7d3e8b479faf5d7cebd3d2b, type: 3}
   m_Name: 
@@ -21418,6 +21418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KingTowerRed
       objectReference: {fileID: 0}
+    - target: {fileID: 5186457029432095596, guid: 33c3a25b0a2b29b4a80e0d1c34af816b,
+        type: 3}
+      propertyPath: data.hitPoints
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 7811694421176497654, guid: 33c3a25b0a2b29b4a80e0d1c34af816b,
         type: 3}
       propertyPath: m_RootOrder
@@ -21437,11 +21442,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186457029432095596, guid: 33c3a25b0a2b29b4a80e0d1c34af816b,
-        type: 3}
-      propertyPath: data.hitPoints
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33c3a25b0a2b29b4a80e0d1c34af816b, type: 3}
@@ -25011,6 +25011,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 318794489502122831, guid: 0199391d6cc7c7547af2828555c7ea9c,
+        type: 3}
+      propertyPath: data.hitPoints
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 3458162420627850709, guid: 0199391d6cc7c7547af2828555c7ea9c,
         type: 3}
       propertyPath: m_RootOrder
@@ -25059,11 +25064,6 @@ PrefabInstance:
     - target: {fileID: 3458162420627850709, guid: 0199391d6cc7c7547af2828555c7ea9c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 318794489502122831, guid: 0199391d6cc7c7547af2828555c7ea9c,
-        type: 3}
-      propertyPath: data.hitPoints
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3458162420628281841, guid: 0199391d6cc7c7547af2828555c7ea9c,
