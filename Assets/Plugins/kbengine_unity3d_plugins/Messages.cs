@@ -2086,19 +2086,19 @@ namespace KBEngine
 			Baseapp_reqAccountBindEmail_argstypes.Add(8);
 			Baseapp_reqAccountBindEmail_argstypes.Add(1);
 			Baseapp_reqAccountBindEmail_argstypes.Add(1);
-			Messages.messages["Baseapp_reqAccountBindEmail"] = new Message_Baseapp_reqAccountBindEmail(51, "Baseapp_reqAccountBindEmail", -1, 0, Baseapp_reqAccountBindEmail_argstypes);
-			Messages.baseappMessages[51] = Messages.messages["Baseapp_reqAccountBindEmail"];
+			Messages.messages["Baseapp_reqAccountBindEmail"] = new Message_Baseapp_reqAccountBindEmail(50, "Baseapp_reqAccountBindEmail", -1, 0, Baseapp_reqAccountBindEmail_argstypes);
+			Messages.baseappMessages[50] = Messages.messages["Baseapp_reqAccountBindEmail"];
 
 
 			List<Byte> Baseapp_reqAccountNewPassword_argstypes = new List<Byte>();
 			Baseapp_reqAccountNewPassword_argstypes.Add(8);
 			Baseapp_reqAccountNewPassword_argstypes.Add(1);
 			Baseapp_reqAccountNewPassword_argstypes.Add(1);
-			Messages.messages["Baseapp_reqAccountNewPassword"] = new Message_Baseapp_reqAccountNewPassword(54, "Baseapp_reqAccountNewPassword", -1, 0, Baseapp_reqAccountNewPassword_argstypes);
-			Messages.baseappMessages[54] = Messages.messages["Baseapp_reqAccountNewPassword"];
+			Messages.messages["Baseapp_reqAccountNewPassword"] = new Message_Baseapp_reqAccountNewPassword(53, "Baseapp_reqAccountNewPassword", -1, 0, Baseapp_reqAccountNewPassword_argstypes);
+			Messages.baseappMessages[53] = Messages.messages["Baseapp_reqAccountNewPassword"];
 
-			Messages.messages["Entity_forwardEntityMessageToCellappFromClient"] = new Message_Entity_forwardEntityMessageToCellappFromClient(58, "Entity_forwardEntityMessageToCellappFromClient", -1, -1, new List<Byte>());
-			Messages.baseappMessages[58] = Messages.messages["Entity_forwardEntityMessageToCellappFromClient"];
+			Messages.messages["Entity_forwardEntityMessageToCellappFromClient"] = new Message_Entity_forwardEntityMessageToCellappFromClient(57, "Entity_forwardEntityMessageToCellappFromClient", -1, -1, new List<Byte>());
+			Messages.baseappMessages[57] = Messages.messages["Entity_forwardEntityMessageToCellappFromClient"];
 
 			Messages.messages["Baseapp_hello"] = new Message_Baseapp_hello(200, "Baseapp_hello", -1, -1, new List<Byte>());
 			Messages.baseappMessages[200] = Messages.messages["Baseapp_hello"];

@@ -92,7 +92,7 @@ public class UIPageID : MonoBehaviour
             _Gen(c, cPath, list);
         }
     }
-
+#if UNITY_EDITOR
     //[MenuItem("GameObject/RayGame/生成UIPage脚本", priority = 0)]
     [ContextMenu("生成UIPage脚本")]
     public void Gen()
@@ -147,4 +147,5 @@ public class UIPageID : MonoBehaviour
 
         AssetDatabase.Refresh();
     }
+#endif
 }

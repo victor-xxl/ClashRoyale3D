@@ -18,9 +18,9 @@ MonoBehaviour:
   m_DisableCatalogUpdateOnStart: 0
   m_UniqueBundleIds: 0
   m_RemoteCatalogBuildPath:
-    m_Id: 01d5a54ce7c8f4e6fb012b4231c0e6b9
+    m_Id: 1664b6053a27a4ac5bbc7846a27f09f1
   m_RemoteCatalogLoadPath:
-    m_Id: 18d330823692a436dad1d1a4529a9d5e
+    m_Id: dba6ad3240f6c432c9ec347abe95130a
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 94cb6fb709e3f504bbf8f2e483cd509b, type: 2}
@@ -94,6 +94,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 18d330823692a436dad1d1a4529a9d5e
         m_Value: ServerData/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: 8fd8c9292b8b4fc4580c4ed35d29065d
+      m_ProfileName: Local
+      m_Values:
+      - m_Id: 8a6a19676e1b64ee9b388011d7c59596
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 1664b6053a27a4ac5bbc7846a27f09f1
+        m_Value: Assets/StreamingAssets/aa/[BuildTarget]
+      - m_Id: dba6ad3240f6c432c9ec347abe95130a
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 01d5a54ce7c8f4e6fb012b4231c0e6b9
+        m_Value: Assets/StreamingAssets/aa/[BuildTarget]
+      - m_Id: 18d330823692a436dad1d1a4529a9d5e
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: 8a6a19676e1b64ee9b388011d7c59596
       m_Name: BuildTarget
@@ -131,7 +145,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bfa229722bbf64355979bf619787f1d3, type: 2}
   - {fileID: 11400000, guid: 1d620e81e218142e9919b59e165989cb, type: 2}
   - {fileID: 11400000, guid: 769ed96136301410782f33ce4ca528b2, type: 2}
-  m_ActiveProfileId: 6a26c3fff7ac19642861d75d142848ed
+  m_ActiveProfileId: 8fd8c9292b8b4fc4580c4ed35d29065d
   m_HostingServicesManager:
     m_HostingServiceInfos:
     - classRef: UnityEditor.AddressableAssets.HostingServices.HttpHostingService,
@@ -144,7 +158,7 @@ MonoBehaviour:
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
-          m_Data: Assets/StreamingAssets/StandaloneWindows64
+          m_Data: Assets/StreamingAssets/aa/StandaloneWindows64
           m_Key: ContentRoot
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Boolean
